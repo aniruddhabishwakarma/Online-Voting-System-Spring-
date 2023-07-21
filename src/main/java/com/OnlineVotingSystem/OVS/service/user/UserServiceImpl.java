@@ -28,6 +28,7 @@ public class UserServiceImpl implements  UserService{
     @Override
     public ResponseEntity<String> registerUser(UserRequest userRequest) {
 
+
         if(isUsernameExists(userRequest.getUserName())== true){
             return new ResponseEntity<>("User already exists",HttpStatus.NOT_ACCEPTABLE);
         }else{
